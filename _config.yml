@@ -1,6 +1,6 @@
 # Site settings
-title: 亮福的博客
-email: suyan0830@gmail.com
+#title: 亮福的博客
+email: 838152053@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   亮福的博客
 baseurl: "" # the subpath of your site, e.g. /blog/
