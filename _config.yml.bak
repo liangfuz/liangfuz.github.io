@@ -1,12 +1,12 @@
 # Site settings
-title: 亮福的博客
-email: 838152053@qq.com
+title: 闫肃的博客
+email: suyan0830@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  亮福的博客
+  闫肃的博客
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://blog.developabc.com # the base hostname & protocol for your site
+url: http://yansu.org # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
-author: Chris
+author: Su Yan
 
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
@@ -14,24 +14,24 @@ filter: 'category'
 recent_num: 20
 
 # Social account
-twitter: chris
-weibo: chris
-github: chris
-instagram: chris
-linkedin: chris
+twitter: masonsuyan
+weibo: suyan0830
+github: suyan
+instagram: suyan0830
+linkedin: suyan0830
 
 # avatar and Favicon
-avatar: http://github-blog.oss-cn-shenzhen.aliyuncs.com/avator.jpg
-favicon: http://github-blog.oss-cn-shenzhen.aliyuncs.com/avator.jpg
+avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
 # disqus config
 disqus:
-  shortname: chris-zh
+  shortname: suyan-zh
 
 # google analytics config
-#ga:
-#  id: UA-54767140-1
-#  url: yansu.org
+ga:
+  id: UA-54767140-1
+  url: yansu.org
 
 # Build settings
 permalink: /:year/:month/:day/:title.html
