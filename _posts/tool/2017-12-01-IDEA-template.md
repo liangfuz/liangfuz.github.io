@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IDEA 类及方法注释（主要讲解DESCRIPTION自动生成）
-category: 工具
+category: IDEA
 tags: IDEA
 keywords: IDEA 描述DESCRIPTION自动生成
 ---
