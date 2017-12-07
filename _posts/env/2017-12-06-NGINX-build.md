@@ -3,7 +3,7 @@ layout: post
 title: Centos yum 搭建与配置Nginx
 category: 环境搭建
 tags: nginx
-keywords: nginx
+keywords: nginx,linux
 ---
 
 Nginx 是一个安装非常的简单、配置文件非常简洁（还能够支持perl语法）、Bug非常少的高性能HTTP和反向代理服务器，yum安装nginx也非常简单  
