@@ -36,7 +36,7 @@ nginx的配置文件是目录下面的nginx.conf
 在server外添加一个upstream，而直接在proxy_pass里面直接用http://+upstream的名称来使用。
 upstream中的server元素必须要注意，不能加http://，但proxy_pass中必须加。
 如果第一台服务器挂了，就会自动转发到第二台，同时weight决定了哪台服务器更有可能被访问到。
-max_fails=1 fail_timeout=120s; 表示server如果在120s内发生2次失败（超时或者拒绝连接）则将该server剔除出去，不再向其分发请求，120秒后再恢复服务。
+max_fails=2 fail_timeout=120s; 表示server如果在120s内发生2次失败（超时或者拒绝连接）则将该server剔除出去，不再向其分发请求，120秒后再恢复服务。
 ```
 upstream backend {  
     server localhost:8080 #weight=1 max_fails=2 fail_timeout=120s;  
