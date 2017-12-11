@@ -134,8 +134,8 @@ mysql> SHOW VARIABLES LIKE 'character%';
 mysql字符集修改完成
 
 ### 7.用户名密码设置
-初次安装mysql是root账户是没有密码的
-设置密码的方法
+初次安装mysql是root账户是没有密码的  
+设置密码的方法如下
 ```
 # mysql -uroot
 mysql> set password for 'root'@'localhost' = password('mypasswd');
