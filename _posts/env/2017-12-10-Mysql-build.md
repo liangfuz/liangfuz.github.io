@@ -141,3 +141,29 @@ mysql字符集修改完成
 mysql> set password for 'root'@'localhost' = password('mypasswd');
 mysql> exit
 ```
+### 8.允许mysql远程访问
+
+mysql默认是不可远程访问的，可以使用以下三种方式修改:  
+a、改表。
+```
+mysql -u root –p
+mysql>use mysql;
+mysql>update user set host = '%' where user = 'root';
+mysql>select host, user from user;
+```
+b、授权。
+
+例如，root使用123456从任何主机连接到mysql服务器。
+```
+mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+```
+允许用户admin从ip为1.1.1.1的主机连接到mysql服务器，并使用123456作为密码
+```
+mysql>GRANT ALL PRIVILEGES ON *.* TO 'admin'@'1.1.1.1' IDENTIFIED BY '123456' WITH GRANT OPTION;
+mysql>FLUSH RIVILEGES
+```
+赋予任何主机访问数据的权限
+```
+mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION
+mysql>FLUSH PRIVILEGES
+```
