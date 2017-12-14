@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://blog.developabc.com # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
-author: Chris
+author: liangfuz
 
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
@@ -14,11 +14,11 @@ filter: 'category'
 recent_num: 20
 
 # Social account
-twitter: chris
-weibo: chris
-github: chris
-instagram: chris
-linkedin: chris
+#twitter: chris
+#weibo: chris
+github: liangfuz
+#instagram: chris
+#linkedin: chris
 
 # avatar and Favicon
 avatar: http://github-blog.oss-cn-shenzhen.aliyuncs.com/avator.jpg
