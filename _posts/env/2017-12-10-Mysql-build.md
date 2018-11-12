@@ -84,7 +84,6 @@ pid-file=/var/run/mysqld/mysqld.pid
 ```
 在[mysqld]下面添加
 ```
-default-character-set=utf8
 character-set-server=utf8
 ```
 如果没有[client]则添加
