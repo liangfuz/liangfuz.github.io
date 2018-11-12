@@ -1,6 +1,6 @@
 ---
 layout: post
-title: yum搭建mysql
+title: centos6 yum搭建mysql
 category: 环境搭建
 tags: mysql
 keywords: mysql
