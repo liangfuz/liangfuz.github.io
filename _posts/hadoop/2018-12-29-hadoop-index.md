@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hadoop 配置 学习
+title: hadoop搭建与学习
 category: hadoop学习
 tags: hadoop
 keywords: hadoop
