@@ -32,13 +32,15 @@
     <nav id="toc">
       {% if site.filter == 'category' %}
         {% for post in site.posts %}
-        <a class="toc-link" data-filter="{{ post.categories | sort: 'title', 'last'}}" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+        <a class="toc-link" data-filter="{{ post.categories | sort: 'post.date', 'first'}}"
+           data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
             {{ post.title}}
           </a>
         {% endfor %}
       {% elsif site.filter == 'tag' %}
         {% for post in site.posts %}
-          <a class="toc-link" data-filter="{{ post.categories | sort: 'title', 'last'}}" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+          <a class="toc-link" data-filter="{{ post.categories | sort: 'post.', 'first'}}"
+             data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
             {{ post.title}}
           </a>
         {% endfor %}
