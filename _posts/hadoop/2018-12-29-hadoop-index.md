@@ -4,6 +4,7 @@ title: hadoop搭建与学习
 category: hadoop学习
 tags: hadoop
 keywords: hadoop
+top: 1
 ---
 Hadoop®是Apache™开源的可靠的，可伸缩扩展的分布式计算系统
 hadoop是一个大数据处理的框架，它允许使用简单的编程模型在计算机集群之间对大型数据集进行分布式处理。它被设计成从单个服务器扩展到数千台机器，
