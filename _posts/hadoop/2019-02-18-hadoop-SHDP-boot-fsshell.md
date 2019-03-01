@@ -1,7 +1,7 @@
 ---
 layout: post
 title: hadoop Springboot集成fsshell
-category: hadoop学习 github fsshell
+category: hadoop学习
 tags: hadoop
 keywords: hadoop
 top: 2
@@ -45,13 +45,24 @@ public class DemoApplication implements CommandLineRunner {
 }
 ```
 
-在这之前使用我使用dfs指令创建了几个目录，上传了一个文件，可以在WEB上看到
+在这之前使用我使用dfs指令创建了几个目录`/HADOOP/CREATE`，上传了一个文件`LICENSE.txt`，可以在WEB上看到
 <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190218.png"></img>
 
 jar包执行
 
-```java -jar target/boot-fsshell-0.1.0.jar```
+```
+java -jar target/boot-fsshell-0.1.0.jar
+```
 
+执行jar包得到结果：
+```
+[root@xxx jar_repo]# java -jar boot-fsshell-0.1.0.jar 
+> hdfs://localhost:9000/
+> hdfs://localhost:9000/HADOOP
+> hdfs://localhost:9000/HADOOP/CREATE
+> hdfs://localhost:9000/HADOOP/CREATE/LICENSE.txt
+
+```
 #### 注意
 在这期间执行`start-dfs.sh`发现DataNode一直起不来，查看日志
 ```
@@ -116,13 +127,4 @@ SHUTDOWN_MSG: Shutting down DataNode at localhost/127.0.0.1
 ```
 netstat -atunlp|grep 50107
 kill -9 xxx
-```
-执行jar包得到正确的结果：
-```
-[root@xxx jar_repo]# java -jar boot-fsshell-0.1.0.jar 
-> hdfs://localhost:9000/
-> hdfs://localhost:9000/HADOOP
-> hdfs://localhost:9000/HADOOP/CREATE
-> hdfs://localhost:9000/HADOOP/CREATE/LICENSE.txt
-
 ```
