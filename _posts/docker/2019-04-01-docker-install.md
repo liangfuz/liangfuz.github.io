@@ -29,6 +29,7 @@ docker-logrotate docker-engine
 
 ### 2.3 安装docker-ce
 根据个人需求，docker安装可以分为以下几种方式：
+
   1）大多数用户会使用<a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-using-the-repository">docker仓库</a>的方式安装，这种便于安装和更新，推荐使用
   
   2）部分用户会自行下载RPM包来<a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-from-a-package">手动安装</a>和手动升级，这种适用于无网络访问的系统
@@ -141,13 +142,13 @@ docker-logrotate docker-engine
   
 ### 2.6 卸载docker-ce
 
-   1.卸载docker安装包：
+   1）卸载docker安装包：
    
    ```
    yum remove docker-ce
    ```
 
-   2.主机上的映像、容器、卷或自定义配置文件并不会自动删除。
+   2）主机上的映像、容器、卷或自定义配置文件并不会自动删除。
    删除所有图像、容器和卷:
    
    ```
