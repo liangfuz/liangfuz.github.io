@@ -1,6 +1,6 @@
 ---
 layout: post
-title: centos安装docker
+title: 1.centos安装docker 环境
 category: docker
 tags: docker
 keywords: docker
