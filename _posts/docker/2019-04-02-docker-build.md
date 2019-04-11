@@ -13,14 +13,16 @@ keywords: docker
 
 ## 2. 前提条件
    <a href = "https://docs.docker.com/engine/installation/">Docker版本1.13或以上</a>
+   
    <a href = "https://blog.developabc.com/2019/04/01/docker-install.html">Docker 环境安装</a>
+   
    快速测试环境是否安装正确：
    ```
    docker run hello-world
    ```
 ## 3. 介绍
 
-   是时候开始以Docker的方式构建应用程序了。我们从这类应用程序的层次结构的底部开始，即这个页面所涵盖的容器。
+   以Docker的方式构建App需要了解App的层次结构，我们从App层次结构的底部开始，即容器。
    在这个级别之上是服务，它定义了容器在生产中的行为，最后，在顶层是堆栈（本文讲的是容器，服务和堆栈将在后面介绍）。
    
     ```
