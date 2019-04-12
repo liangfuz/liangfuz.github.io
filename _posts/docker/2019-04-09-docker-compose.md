@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3.1 docker-compose学习
+title: 3.docker-compose学习
 category: docker
 tags: docker
 keywords: docker
@@ -10,7 +10,7 @@ keywords: docker
    熟悉docker-compose概念以及docker-compose安装。
 
 ## 2. docker-compose是什么
-   docker-compose是用于定义和多容器应用程序运行的工具。docker-compose可以使用YAML文件来配置应用程序，然后使用一个命令，从配置到创建并启动所有服务。
+   docker-compose是用于定义和多容器应用程序运行的工具。docker-compose可以使用YAML文件来配置应用程序，然后使用一个命令，实现从配置到创建并启动所有服务的功能。
 ## 3.docker-compose特性：
 
 ### 3.1 单个主机上的多个环境隔离
