@@ -94,3 +94,28 @@ keywords: docker
    <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/2019-05-05.png"/>
    
    <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/2019-05-05-1.png"/>
+   
+### 5 应用扩展
+   在`docker-compose.yml`文件里面，我们可以通过修改`replicas`的值来扩展应用。修改之后执行`docker stack deploy`命令：
+   ```
+   [root@localhost compose]# vim docker-compose.yml 
+   [root@localhost compose]# docker stack deploy -c docker-compose.yml getstartedlab
+   Updating service getstartedlab_web (id: zzdwlojws37nh23hgv75gp5kx)
+   image friendlyhello:latest could not be accessed on a registry to record
+   its digest. Each node will access friendlyhello:latest independently,
+   possibly leading to different nodes running different
+
+   [root@localhost compose]# docker stack services getstartedlab
+   ID                  NAME                MODE                REPLICAS            IMAGE                  PORTS
+   zzdwlojws37n        getstartedlab_web   replicated          6/6                 friendlyhello:latest   *:4000->80/tcp
+   ```  
+      
+### 5 关闭应用
+   ```
+   [root@localhost compose]# docker stack rm getstartedlab
+   Removing service getstartedlab_web
+   Removing network getstartedlab_webnet
+   
+   [root@localhost compose]# docker swarm leave --force
+   Node left the swarm.
+   ``` 
