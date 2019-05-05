@@ -48,7 +48,7 @@ keywords: docker
    ```
    
 ### 5 启动
-   在执行`docker stack deploy`之前先执行`docker swarm init`命令
+   在执行`docker stack deploy`之前先执行`docker swarm init`命令  
    PS:这里我们涉及到了后面的命令，因为不执行这个的话会报错`this node is not a swarm manager.`
    启动命令：
    ```
