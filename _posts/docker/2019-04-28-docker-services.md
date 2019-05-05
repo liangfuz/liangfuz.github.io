@@ -19,9 +19,9 @@ keywords: docker
    要做到以上的功能很简单，我们只需要编写一个`docker-compose.yml`文件。
    
 ## 3.本文使用工具
-   1.docker1.13或更高版本
-   2.Docker compose
-   3.掌握前面的章节内容
+   1.docker1.13或更高版本  
+   2.Docker compose  
+   3.掌握前面的章节内容  
    4.确保`docker run -p 4000:80 repo:tag`正常运行，如前面的`docker run -p 4000:80 friendlyhello`,打开`http://localhost:4000/`正常显示
 
 ### 4 编写`docker-compose.yml`文件
