@@ -11,4 +11,6 @@ layout: post
 
 这个博客通过 [Jekyll](http://jekyllrb.com/) 生成，部署在 [Github](https://pages.github.com)，主题基于 [3-Jekyll](https://github.com/P233/3-Jekyll) 修改生成，非常感谢 [Peiwen Lu](https://github.com/P233) 开发出这么漂亮的主题。(Fork自大神[闫肃](https://github.com/suyan/suyan.github.io)的博客)
 
+Ps:交流学习请联系838152053@qq.com，代码狗一只，不定期更新>_<!。
+
 
