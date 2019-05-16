@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 4.docker服务编排（运用docker-compose）
+title: 4.docker Services服务编排（运用docker-compose）
 category: docker
 tags: docker
 keywords: docker
@@ -18,7 +18,7 @@ keywords: docker
    
    要做到以上的功能很简单，我们只需要编写一个`docker-compose.yml`文件。
    
-## 3.本文使用工具
+## 3.预备条件
    1.docker1.13或更高版本  
    2.Docker compose  
    3.掌握前面的章节内容  

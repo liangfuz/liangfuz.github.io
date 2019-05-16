@@ -11,7 +11,7 @@ keywords: docker
 
 
 
-## 2. 前提条件
+## 2. 预备条件
    <a href = "https://docs.docker.com/engine/installation/">Docker版本1.13或以上</a>
    
    <a href = "https://blog.developabc.com/2019/04/01/docker-install.html">Docker 环境安装</a>
