@@ -31,8 +31,9 @@ keywords: docker
    一个swarm集群是由多个物理或者虚拟的节点组成。最简单的是执行`docker swarm init`使得当前机器开启swarm模式，同时当前机器成为swarm manager
    节点，然后在其他的节点执行`docker swarm join`使其他的节点加入swarm成为workers。下面主要描述的是如何在两台虚拟linux系统上面搭建swarm集群。
  
-#### 4.1 创建cluster
-   1.按照2.6的操作我们现在拥有两台虚拟机，使用第一台作为manager，执行`docker swarm init --advertise-addr <ip>`命令：
+### 5 创建cluster
+#### 5.1 启动swarm manager节点
+   按照2.6的操作我们现在拥有两台虚拟机，使用第一台作为manager，执行`docker swarm init --advertise-addr <ip>`命令：
    ```
    [root@localhost ~]# docker swarm init --advertise-addr 192.168.10.152
    Swarm initialized: current node (t8jekqeafyth52r593rqw25gv) is now a manager.
@@ -48,7 +49,8 @@ keywords: docker
    [root@localhost ~]# vim /etc/hostname 
    [root@localhost ~]# reboot
    ```
-   2.按照上面说的，在另外一个节点上面执行`docker swarm join-token <token> <ip>:2377`命令：
+#### 5.2 加入worker节点
+   按照上面说的，在另外一个节点上面执行`docker swarm join-token <token> <ip>:2377`命令：
    ```
    [root@localhost ~]# docker swarm join --token SWMTKN-1-4o5akm4y891j6qlop54l5lx827sfc0nf721mg37ggrx93gqn7m-3meu1adz1yyiderp5xzj78z8q 192.168.10.152:2377
    This node joined a swarm as a worker.
@@ -66,18 +68,19 @@ keywords: docker
    [root@localhost ~]# firewall-cmd --state
    not running
    ```
-   3.在第一台机上面执行`docker node ls`命令查看节点
+#### 5.3 查看节点
+   在第一台机上面执行`docker node ls`命令查看节点
    ```
- [root@master compose]# docker node ls
- ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
- spcwv3gpf3h2tnf0a63pasm2b *   master              Ready               Active              Leader              18.09.4
- drzccu7hwgb3a7toqc23f9l4c     worker1             Ready               Active                                  18.09.4
+   [root@master compose]# docker node ls
+   ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+   spcwv3gpf3h2tnf0a63pasm2b *   master              Ready               Active              Leader              18.09.4
+   drzccu7hwgb3a7toqc23f9l4c     worker1             Ready               Active                                  18.09.4
    ```
-   4.退出swarm
+#### 5.4 退出swarm
    如果想要退出swarm执行`docker swarm leave`命令
    
-#### 4.2 在swarm集群上面部署app
-   1. 设置环境变量  
+### 6 在swarm集群上面部署app
+#### 6.1 设置环境变量  
    在第一个节点上面设置环境变量：
    ```
    export DOCKER_TLS_VERIFY=1
@@ -90,7 +93,7 @@ keywords: docker
    [root@localhost ~]# vim /etc/hosts
    [root@localhost ~]# source /etc/profile
    ```
-   2.在swarm manager上面部署app
+#### 6.2 在swarm manager上面部署app
    至此，我们拥有了swarm manager主机，我们可以使用`docker stack deploy -c docker-compose.yml getstartedlab`命令来
    部署之前的friendlyhello app，而后使用`docker stack ps getstartedlab`查看就可以发现原本单机运行6个实例的被分别运行在
    swarm集群的master和worker1上面
@@ -108,13 +111,13 @@ keywords: docker
    asuejwsdjy8t        getstartedlab_web.5   friendlyhello:latest   worker1             Running             Running 11 seconds ago                       
    rs6ccjya8b63        getstartedlab_web.6   friendlyhello:latest   master              Running             Running 13 seconds ago
    ```
-   3.浏览器分别访问`192.168.10.152:4000`和`192.168.10.153:4000`
+#### 6.3 浏览器分别访问`192.168.10.152:4000`和`192.168.10.153:4000`
    <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190516.png"/>
    
-   4.docker swarm 工作路由
+#### 6.4 docker swarm 工作路由
    <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190516-1.png"/>
    
-   5.关闭
+#### 6.5 关闭
    `docker stack rm getstartedlab`
    ```
    [root@master build]# docker stack rm getstartedlab
