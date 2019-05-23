@@ -11,8 +11,8 @@ keywords: docker
    1.docker1.13或更高版本  
    2.Docker compose  
    3.掌握前面的章节内容  
-   4.确保`docker run -p 4000:80 repo:tag`正常运行，如前面的`docker run -p 4000:80 friendlyhello`,打开`http://localhost:4000/`正常显示
-   5.上一章节的`docker-compose.yml`拷贝
+   4.确保`docker run -p 4000:80 repo:tag`正常运行，如前面的`docker run -p 4000:80 friendlyhello`,打开`http://localhost:4000/`正常显示  
+   5.上一章节的`docker-compose.yml`拷贝  
    6.像上一章节一样拥有两台虚拟主机
    
 ## 2. 什么是Stack
@@ -55,8 +55,8 @@ keywords: docker
    networks:
      webnet:
    ```
-   和之前的相比，这里新增了一个视图`visualizer`web服务，和一个可以让`visualizer`访问主机的docker socket的`volumes`
-   ,另外还有一个`placement`确保这个只运行在swarm manager而不是worker上面。  
+   和之前的相比，这里新增了一个视图`visualizer`web服务，和一个可以让`visualizer`访问主机的docker socket的`volumes`挂载卷
+   ,另外还有一个`placement constraints`约束，确保这个只运行在swarm manager而不是worker上面。  
    后面有空会介绍一下`volumes`和`placement constraints`
    
 ### 3.2 部署

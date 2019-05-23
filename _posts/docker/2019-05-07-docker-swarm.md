@@ -14,8 +14,8 @@ keywords: docker
    1.docker1.13或更高版本  
    2.Docker compose  
    3.掌握前面的章节内容  
-   4.确保`docker run -p 4000:80 repo:tag`正常运行，如前面的`docker run -p 4000:80 friendlyhello`,打开`http://localhost:4000/`正常显示
-   5.上一章节的`docker-compose.yml`拷贝
+   4.确保`docker run -p 4000:80 repo:tag`正常运行，如前面的`docker run -p 4000:80 friendlyhello`,打开`http://localhost:4000/`正常显示  
+   5.上一章节的`docker-compose.yml`拷贝  
    6.准备两台linux虚拟机（如果使用VmWare的话可以将虚拟机下面的磁盘（vmdk文件）复制，这样就能得到两台一样的环境的VM linux主机，
    省去重新安装docker等一系列环境的麻烦）
    
