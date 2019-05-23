@@ -216,3 +216,5 @@ keywords: docker
    total 4
    -rw-r--r--. 1 polkitd input 167 May 23 07:39 appendonly.aof
    ```
+   至此，docker的镜像，容器，打包运行，服务编排，负载集群等基本操作都过了一遍，
+   下一篇将运用docker对SpringCloud微服务部署做一个实战训练，争取对以上的内容做到充分熟练的运用。
