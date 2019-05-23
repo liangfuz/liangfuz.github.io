@@ -77,6 +77,32 @@ keywords: docker
    Digest: sha256:b36667c98cf8f68d4b7f1fb8e01f742c2ed26b5f0c965a788e98dfe589a4b3e4
    Status: Image is up to date for localhost:5000/myfirstimage:latest
    ```
+   如果下载镜像的时候报如下错误
+   ```
+   [root@worker1 ~]# docker pull 192.168.10.152:5000/fdlyhello
+   Using default tag: latest
+   Error response from daemon: Get https://192.168.10.152:5000/v2/: http: server gave HTTP response to HTTPS client
+   ```
+   这个问题可能是由于客户端采用https，docker registry未采用https服务所致
+   解决办法是修改`/etc/docker/daemon.js`文件，在文件中写入：
+   ```
+   { "insecure-registries":["192.168.10.152:5000"] }
+   ```
+   保存退出后，重启docker。问题解决：
+   ```
+   [root@worker1 ~]# docker pull 192.168.10.152:5000/fdlyhello
+   Using default tag: latest
+   latest: Pulling from fdlyhello
+   27833a3ba0a5: Already exists 
+   8b35abcb27de: Already exists 
+   cd1fc6dee9fe: Already exists 
+   2c6a92003566: Already exists 
+   1fd3a406cb45: Pull complete 
+   86258feb7a97: Pull complete 
+   2bdc9d83a3a1: Pull complete 
+   Digest: sha256:78a6b7802c3a3a24bc8deacdbf01796cca029ff24ef18392a3f003ad42b0adab
+   Status: Downloaded newer image for 192.168.10.152:5000/fdlyhello:latest
+   ```
 ### 3.6 停止仓库并删除所有数据
    ```
    docker container stop registry && docker container rm -v registry
