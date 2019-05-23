@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 6.docker Swarms集群搭建
+title: 7.docker Stack使用
 category: docker
 tags: docker
 keywords: docker
