@@ -18,6 +18,24 @@ yum install nginx
 service nginx start
 Starting nginx:              [  OK  ]
 ```
+centos7安装的时候如果报下面错误：
+```
+Error: Package: nginx-1.16.0-1.el6.ngx.x86_64 (nginx)
+           Requires: libpcre.so.0()(64bit)
+ You could try using --skip-broken to work around the problem
+ You could try running: rpm -Va --nofiles --nodigest
+```
+需要将`nginx.repo`中`/centos/6/`改成`/centos/7/`
+
+```
+vi /etc/yum.repos.d/nginx.repo
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+```
+重新`yum -y install nginx`安装
 ### 第三步进入浏览器，输入IP或者域名测试
 如果看到以下输出则说明安装完成
 ```
