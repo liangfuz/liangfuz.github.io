@@ -106,7 +106,9 @@ Server/red5等。
    [root@master sbin]# ./nginx 
    ```
    浏览器访问提示成功启动
-   <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190529-1.png"/> 
+   <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190529-1.png"/>  
+   
+   直播Nginx服务搭建完毕。
    
 ### 2. nginx rtmp配置
    编辑`nginx.conf`添加rtmp配置
@@ -194,7 +196,7 @@ Server/red5等。
    启动VLC，媒体->打开网络串流，输入拉流地址`rtmp://xxxx:1935/live`
    <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190529-5.png"/>
    
-   效果图  
+   效果图（左边OBS模拟的是上传，右边VLC模拟的是播放客户端，因为我是在同一台电脑上演示的，所以效果糅在一起了）  
    
    <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/rtmp3.gif"/>
    
