@@ -202,6 +202,14 @@ Server/red5等。
    
    至此，一个简易的直播服务就搭建完毕了。
    
+### 4. 多个房间
+   开启多个房间或者说多个频道只需要在OBS上面修改`播放路径/串码流`,然后在VLC的播放路径作相应的修改就可以了
+   <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190605.png"/>
+   
+   <img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/20190605-1.png"/>
+   
+### 5. 更多nginx-rtmp配置
+   更多的nginx配置可以查看github上的<a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module文档</a>
    
 
 
