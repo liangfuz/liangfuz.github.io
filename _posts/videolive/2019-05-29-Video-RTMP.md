@@ -15,6 +15,8 @@ Server/red5等。
 .html">阿里云</a>已经有成熟的方案，只不过价格不菲，有钱的土豪可以直接购买，然后进行开发对接）  
 我们这里使用OBS软件模拟推流，VLC播放模拟拉流，相当于用obs直播上传PC显示器内容到Nginx，然后用VLC播放
 
+### 预览效果图
+<img src="http://github-blog.oss-cn-shenzhen.aliyuncs.com/rtmp3.gif"/>
 
 ### 1. nginx rtmp模块集成
 #### 1.1 下载<a href="http://nginx.org/en/download.html">nginx安装包</a>
